@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import "./todo.css";
 
 class Todo extends Component {
     constructor (props) {
@@ -28,6 +29,7 @@ handleSubmit(event) {
                     <h1>Simple Todo App</h1>
                     <form onSubmit={this.handleSubmit}>
                     <input
+                        className="todo-input"
                         type="text"
                         name="inputText"
                         placeholder="what would you like to do?..."
@@ -36,15 +38,17 @@ handleSubmit(event) {
                             this.setState({inputText: e.target.value})
                         }}
                     />
-                    <button type="submit">
+                    <button 
+                        className="save-button"
+                        type="submit">
                         Save
                     </button>
                     </form>
                     <p>{this.state.inputText}</p>
                 </div>
-                <ul>
+                <ol className="todo-content">
                     {data}
-                </ul>
+                </ol>
             </div>
         )
         }
