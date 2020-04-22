@@ -36,15 +36,15 @@ handleSubmit(event) {
                             this.setState({inputText: e.target.value})
                         }}
                     />
-                    <button type="submit" onClick={this.handleSubmit}>
+                    <button type="submit">
                         Save
                     </button>
                     </form>
                     <p>{this.state.inputText}</p>
-                    <ul>
-                        {data}
-                    </ul>
                 </div>
+                <ul>
+                    {data}
+                </ul>
             </div>
         )
         }
