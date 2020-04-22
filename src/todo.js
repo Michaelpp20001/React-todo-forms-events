@@ -8,7 +8,6 @@ class Todo extends Component {
 
     this.handleSubmit = this.handleSubmit.bind(this)
 }
-style = {textAlign: "center"}
 
 handleSubmit(event) {
     event.preventDefault();
@@ -25,7 +24,7 @@ handleSubmit(event) {
         console.log("after render", this.state.todo)
         return (
             <div className="container">
-                <div className="header" style={this.style}>
+                <div className="header">
                     <h1>Simple Todo App</h1>
                     <form onSubmit={this.handleSubmit}>
                     <input
